@@ -6,6 +6,6 @@ echo "stats uri /haproxy?stats" >> /etc/haproxy/haproxy.cfg
 echo "default_backend http_back" >> /etc/haproxy/haproxy.cfg
 echo "backend http_back" >> /etc/haproxy/haproxy.cfg
 echo "balance roundrobin" >> /etc/haproxy/haproxy.cfg
-echo "server backend-server1 192.168.33.6:80 check" >> /etc/haproxy/haproxy.cfg
+echo "server backend-server1 {$backendserver_private}:80 check" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
    
