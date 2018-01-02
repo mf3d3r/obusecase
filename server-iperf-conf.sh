@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/etc/init.d/apache2 restart
+screen -d -m -S server iperf -s
