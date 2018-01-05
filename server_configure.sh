@@ -1,7 +1,7 @@
 #!/bin/bash
-touch /tmp/ip-private
-echo "server_private_Ip: $server_private" >> /tmp/ip-private
+touch /tmp/counter
+echo "server_counter: $server_counter“ >> /tmp/counter
 CONFIG="/etc/haproxy/haproxy.cfg"
-echo "server backend-server1 ${server_private}:80 check" >> $CONFIG
+echo "server backend-server-${server_counter} ${server_private}:80 check" >> $CONFIG
 sudo service haproxy restart
    
